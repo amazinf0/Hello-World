@@ -1,9 +1,17 @@
 //Global Variables
-//
-//Fitting CANVAS into Monitor Display
+int appWidth=1;
 //
 //Declaring Display Geometry: landscape, square, portrait
-size(); //Able to deploy with fullScreen();
+size(700, 1000); //Able to deploy with fullScreen();
+//Concatenation: , or + (i.e space)
+println("\t\t\tWidth="+width, "\tHeight="+height);
+println("Display Monitor:", "\twidth:"+displayWidth, "\theight:"+displayHeight);
+//
+//Fitting CANVAS into Monitor Display
+if ( width > displayWidth ) appWidth=0; //CANVAS-width will not fit
+if ( height > displayHeight ) appHeight=0; //CANVAS-width will not fit
+if ( appWidth==0 ) println("STOP, is broken");
+if ( appHeight==0 ) println("STOP, is broken");
 //
 //Outputting instructions to user when errors with above
 //Bru, turn your phum
