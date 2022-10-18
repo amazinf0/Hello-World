@@ -20,4 +20,5 @@ if ( appWidth!=0 && appHeight!=0) println("Funtioning"); //AND
 String ls="Landscape or Square" , p="portrait" , DO="Display Oreintation" , instruct="Turn you're phone (intended you're)";
 String oreintation = (appWidth >= appHeight) ? ls : p ;
 println(DO, oreintation);
+if (oreintation == p ) print(instruct); //Lster, output to CANVAS
 //
