@@ -27,9 +27,8 @@ void setup() {
   }
 } //End setup
 //
-void draw(
-
-) {
+void draw() {
+  square(50, 100, 10);circle(70, 70, 70);ellipse(100, 100, 100, 100);
 } //End draw
 //
 void keyPressed() {
