@@ -1,9 +1,9 @@
 # Hello World
-CS10 Lessons (when will coding end)
+CS10 Lesson
 
 ---
 
-Lessons Summary
--
+Lesson Summary
+- 
 
 ---

@@ -1,48 +1,26 @@
+//A simple Display Alogirthm, does not use IF=ElseIf-Else
+//
 //Global Variables
 int appWidth, appHeight;
-float centerX, centerY, xStart, yStart, widthRect, heightRect;
 //
-void setup() {
-  //Declaring Display Geometry: landscape, square, portrait
-  size(700, 400); //Able to deploy with fullScreen();
-  //fullScreen();
-  appWidth = width;
-  appHeight = height;
-  //Concatenation: , or + (i.e space)
-  println("\t\t\tWidth="+width, "\tHeight="+height);
-  println("Display Monitor:", "\twidth:"+displayWidth, "\theight:"+displayHeight);
-  //
-  String ls="Landscape or Square", p="portrait", DO="Display Orientation", instruct="Bru, turn your phun";
-  //
-  if ( appWidth < appHeight ) { //Declaring Landscape & square
-    println(instruct);
-  } else {
-    println("Display: Good to Go");
-    if ( appWidth > displayWidth ) { //Fitting CANVAS into Monitor Display
-      appWidth=0;
-      appHeight=0;
-      println("STOP, is broken");
-    } else {
-      //Empty ELSE
-    }
-  }
-  //Population
-  centerX = width * 1/2;
-  centerY = height * 1/2;
-  xStart = center - ( width* 1/4);
-  yStart = center - ( width* 1/4);
-  xStart = width * 1/2;
-  xStart = height * 1/2;
-} //End setup
+//Declaring Display Geometry: landscape, square, portrait
+size(600, 700); //Able to deploy with fullScreen();
+appWidth = width;
+appHeight = height;
+//Concatenation: , or + (i.e space)
+println("\t\t\tWidth="+width, "\tHeight="+height);
+println("Display Monitor:", "\twidth:"+displayWidth, "\theight:"+displayHeight);
 //
-void draw() {
-  rect(xStart, yStart, widthRect, heightRect);
-} //End draw
+//Fitting CANVAS into Monitor Display
+if ( appWidth > displayWidth ) appWidth=0; //CANVAS-width will not fit
+if ( appHeight > displayHeight ) appHeight=0; //CANVAS-width will not fit
 //
-void keyPressed() {
-} //End keyPressed
+//Outputting instructions to user when errors with above
+if ( appWidth==0 || appHeight==0 ) println("STOP, is broken"); //OR
+if ( appWidth!=0 && appHeight!=0 ) println("Display: Good to Go"); //AND
 //
-void mousePressed() {
-} //End mousePressed
+String ls="Landscape or Square", p="portrait", DO="Display Orientation", instruct="Bru, turn your phun";
+String orientation = ( appWidth >= appHeight ) ? ls : p ;
+println(DO, orientation);
+if (orientation == p ) println(instruct); //Later, output to CANVAS
 //
-// End Main Program
