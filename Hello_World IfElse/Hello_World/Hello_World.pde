@@ -46,12 +46,12 @@ void draw() {
   background(100); //( color( random(0 , 255) & Blue Issue for night mode
   //
   //Casting Reminder
-  //background( color( random(0 , 255), random(0 , 255), random(0 , 255) ) ); // Colour without blue
+  background( color( random(0 , 255), random(0 , 255), random(0 , 255) ) ); // Colour without blue
   //
   //background( blackNightMode );
   strokeWeight( thick );
-  stroke( yellow ); 
-  fill( purple ); 
+  stroke( white ); 
+  fill( blackNightMode ); 
   rect(xStart, yStart, widthRect, heightRect);
   fill( white ); //default reset
   stroke( blackNightMode ); //default reset
